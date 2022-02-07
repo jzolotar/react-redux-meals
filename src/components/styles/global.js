@@ -16,7 +16,7 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 0.8125rem;
   line-height: 1.4;
-  background-color: #3333;
+  background-color: #F5EEDC;
   display: flex;
   flex-direction: column;
   align-items: center;
