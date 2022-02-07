@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Fragment } from 'react/cjs/react.production.min';
+import Header from './components/Header';
+import Item from './components/Item';
+import Menu from './components/Menu';
+import GlobalStyles from './components/styles/global';
+import data from './data';
 
 function App() {
+  const [filter, setFilter] = useState('all');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <GlobalStyles />
+      <Header />
+      <Menu />
+      {data.map((item) => {
+        return <Item key={item.id} category={item.category} data={item} />;
+      })}
+    </Fragment>
   );
 }
 
