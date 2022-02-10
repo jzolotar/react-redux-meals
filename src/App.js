@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Fragment } from 'react/cjs/react.production.min';
+import { Section } from './components/styles/Section';
 import Header from './components/Header';
 import Item from './components/Item';
 import Menu from './components/Menu';
@@ -25,19 +26,21 @@ function App() {
     .filter((item) => item.category === 'shakes')
     .map((item) => <Item key={item.id} data={item} />);
 
-  const onClickHandler = (category) => {
-    setFilter(category);
+  const onClickHandler = (data) => {
+    setFilter(data.toLowerCase());
   };
 
   return (
     <Fragment>
       <GlobalStyles />
       <Header />
-      <Menu clickHandler={onClickHandler} />
-      {filter === 'all' && contentAll}
-      {filter === 'breakfast' && contentBreakFast}
-      {filter === 'lunch' && contentLunch}
-      {filter === 'shakes' && contentShakes}
+      <Menu onClickHandler={onClickHandler} />
+      <Section>
+        {filter === 'all' && contentAll}
+        {filter === 'breakfast' && contentBreakFast}
+        {filter === 'lunch' && contentLunch}
+        {filter === 'shakes' && contentShakes}
+      </Section>
     </Fragment>
   );
 }

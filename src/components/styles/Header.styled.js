@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  position: relative;
+  margin-top: 8rem;
   h1 {
     text-align: center;
     font-size: 2.6rem;

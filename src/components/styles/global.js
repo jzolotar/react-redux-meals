@@ -16,11 +16,11 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 0.8125rem;
   line-height: 1.4;
-  background-color: #F5EEDC;
-  display: flex;
+  background-color: #ebf7ff;        
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   min-height: 100vh;
 }
 
