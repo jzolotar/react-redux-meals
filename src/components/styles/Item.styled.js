@@ -10,6 +10,10 @@ export const StyledItem = styled.article`
     border-radius: 5px;
     margin-bottom: 0.75rem;
     object-fit: cover;
+    @media (min-width: 768px) {
+      height: 152px;
+      width: 225px;
+    }
   }
   header {
     display: flex;
