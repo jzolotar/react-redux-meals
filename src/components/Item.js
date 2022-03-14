@@ -7,14 +7,18 @@ const Item = (props) => {
   return (
     <StyledItem>
       <img src={img} alt='' />
-      <div>
+      <section>
         <header>
           <h3>{title.toUpperCase()}</h3>
           <span>${price}</span>
         </header>
-
         <p>{desc}</p>
-      </div>
+        <form>
+          <label htmlFor=''>Amount</label>
+          <input type='number' />
+          <button type='submit'>Add</button>
+        </form>
+      </section>
     </StyledItem>
   );
 };
