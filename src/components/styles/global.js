@@ -45,6 +45,17 @@ img {
 display:block;
 width:100%;
 }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li{
+  padding: 0;
+  margin: 0;
+}
 `;
 
 export default GlobalStyles;

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 5rem;
   background-color: #c59d5f;
   color: #ffffff;
@@ -30,7 +34,7 @@ export const StyledNav = styled.nav`
       border: none;
       background-color: transparent;
       font-size: 1.7rem;
-      cursor: p;
+      cursor: pointer;
       @media (min-width: 768px) {
         font-size: 2.5rem;
       }
@@ -53,6 +57,7 @@ export const StyledNav = styled.nav`
       border-radius: 50px;
       display: grid;
       place-items: center;
+      z-index: 999;
 
       @media (min-width: 768px) {
         top: -3px;

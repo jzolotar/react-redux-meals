@@ -1,13 +1,13 @@
 import { StyledMenu } from './styles/Menu.styled';
 import Button from './Button';
 
-const Menu = (props) => {
+const Menu = ({ filterHandler }) => {
   return (
     <StyledMenu>
-      <Button onClickHandler={props.onClickHandler} text={'All'} />
-      <Button onClickHandler={props.onClickHandler} text={'Breakfast'} />
-      <Button onClickHandler={props.onClickHandler} text={'Lunch'} />
-      <Button onClickHandler={props.onClickHandler} text={'Shakes'} />
+      <Button onClickHandler={filterHandler} text={'All'} />
+      <Button onClickHandler={filterHandler} text={'Breakfast'} />
+      <Button onClickHandler={filterHandler} text={'Lunch'} />
+      <Button onClickHandler={filterHandler} text={'Shakes'} />
     </StyledMenu>
   );
 };
