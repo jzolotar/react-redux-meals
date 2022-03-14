@@ -41,7 +41,7 @@ function App() {
   return (
     <Fragment>
       <GlobalStyles />
-
+      {showModal && <CartModal modalHandler={modalHandler} />}
       <Nav modalHandler={modalHandler} />
       <Header />
       <Menu filterHandler={filterHandler} />

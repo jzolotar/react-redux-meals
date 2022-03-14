@@ -11,6 +11,12 @@ export const StyledModal = styled.section`
   height: 32.5rem;
   max-height: 100%;
   z-index: 1010;
+  @media (min-width: 768px) {
+    width: 32rem;
+    max-width: 100%;
+    height: 36rem;
+    max-height: 100%;
+  }
 
   section {
     position: absolute;
@@ -32,6 +38,9 @@ export const StyledModal = styled.section`
         margin-bottom: 0.75rem;
         text-align: center;
         font-size: 1rem;
+        @media (min-width: 768px) {
+          font-size: 1.4rem;
+        }
       }
       li {
         width: 100%;
@@ -42,9 +51,31 @@ export const StyledModal = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        @media (min-width: 768px) {
+          justify-content: space-around;
+        }
+        gap: 2rem;
 
-        div {
+        div:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          h4 {
+            @media (min-width: 768px) {
+              font-size: 1rem;
+            }
+          }
+
+          small {
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            @media (min-width: 768px) {
+              font-size: 0.85rem;
+            }
+          }
+        }
+
+        div:nth-child(2) {
           display: flex;
           gap: 0.4rem;
           button {
@@ -52,13 +83,7 @@ export const StyledModal = styled.section`
             border: 1px solid #ffffff;
             padding: 0.1rem 0.4rem;
             text-align: center;
-            font-size: 1rem;
           }
-        }
-
-        small {
-          font-weight: bold;
-          font-style: italic;
         }
       }
     }

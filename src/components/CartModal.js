@@ -1,7 +1,8 @@
 import { StyledModal } from './styles/Modal.styled';
 import styled from 'styled-components';
-import { Fragment } from 'react/cjs/react.production.min';
-
+import { AiOutlinePlus } from 'react-icons/ai';
+import { AiOutlineMinus } from 'react-icons/ai';
+import { Fragment } from 'react';
 const ModalOverlay = styled.section`
   z-index: 1000;
   position: fixed;
@@ -13,7 +14,7 @@ const ModalOverlay = styled.section`
   opacity: 0.75;
 `;
 
-const CartModal = () => {
+const CartModal = ({ modalHandler }) => {
   return (
     <Fragment>
       <StyledModal>
@@ -24,19 +25,26 @@ const CartModal = () => {
             </h3>
             <ul>
               <li>
-                <h4>
-                  Burger <span>x4</span>
-                </h4>
-                <small>19.99$</small>
                 <div>
-                  <button>+</button>
-                  <button>-</button>
+                  <h4>
+                    Burger <span>x4</span>
+                  </h4>
+                  <small>19.99$</small>
+                </div>
+
+                <div>
+                  <button>
+                    <AiOutlinePlus />
+                  </button>
+                  <button>
+                    <AiOutlineMinus />
+                  </button>
                 </div>
               </li>
             </ul>
           </article>
 
-          <button>Close</button>
+          <button onClick={() => modalHandler()}>Close</button>
         </section>
       </StyledModal>
       <ModalOverlay />
