@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
   background: transparent;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
+  transition: all 0.4s ease-in-out;
 
   @media (min-width: 768px) {
     font-size: 1.4rem;

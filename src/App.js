@@ -4,6 +4,7 @@ import { Section } from './components/styles/Section';
 import Header from './components/Header';
 import Item from './components/Item';
 import Menu from './components/Menu';
+import Nav from './components/Nav';
 import GlobalStyles from './components/styles/global';
 import data from './data';
 
@@ -33,6 +34,7 @@ function App() {
   return (
     <Fragment>
       <GlobalStyles />
+      <Nav />
       <Header />
       <Menu onClickHandler={onClickHandler} />
       <Section>
