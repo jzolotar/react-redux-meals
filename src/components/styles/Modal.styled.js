@@ -94,6 +94,16 @@ export const StyledModal = styled.section`
       background-color: #ffffff;
       color: #333;
       border-radius: 5px;
+      @media (min-width: 768px) {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        padding: 0.2rem 0.25rem;
+      }
+
+      &:hover {
+        color: #c59d5f;
+      }
     }
   }
 `;

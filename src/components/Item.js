@@ -4,6 +4,11 @@ const Item = (props) => {
   console.log(props.data);
   const { title, price, img, desc } = props.data;
 
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    console.log('submit');
+  };
+
   return (
     <StyledItem>
       <img src={img} alt='' />
@@ -13,10 +18,10 @@ const Item = (props) => {
           <span>${price}</span>
         </header>
         <p>{desc}</p>
-        <form>
+        <form onSubmit={onSubmitHandler}>
           <label htmlFor=''>Amount</label>
           <input type='number' />
-          <button type='submit'>Add</button>
+          <button>Add</button>
         </form>
       </section>
     </StyledItem>

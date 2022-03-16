@@ -8,11 +8,10 @@ import Nav from './components/Nav';
 import CartModal from './components/CartModal';
 import GlobalStyles from './components/styles/global';
 import data from './data';
-import { ModalOverlay } from './components/styles/ModalOverlay';
 
 function App() {
   const [filter, setFilter] = useState('all');
-  const [showModal, setShowModal] = useState('false');
+  const [showModal, setShowModal] = useState(false);
 
   const contentAll = data.map((item) => {
     return <Item key={item.id} data={item} />;

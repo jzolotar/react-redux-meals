@@ -1,4 +1,3 @@
-import { Fragment } from 'react/cjs/react.production.min';
 import { StyledHeader } from './styles/Header.styled';
 
 const Header = (props) => {
