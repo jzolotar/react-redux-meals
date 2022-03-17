@@ -1,12 +1,20 @@
+import { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { StyledItem } from './styles/Item.styled';
+import { addItem } from '../store';
 
 const Item = (props) => {
-  console.log(props.data);
-  const { title, price, img, desc } = props.data;
+  const amountRef = useRef();
+  const dispatch = useDispatch();
+  const { title, price, img, desc, id } = props.data;
 
   const onSubmitHandler = (event) => {
+    const amount = amountRef.current.value;
+
+    const item = { title, price, id, amount: Number(amount) };
     event.preventDefault();
-    console.log('submit');
+
+    dispatch(addItem(item));
   };
 
   return (
@@ -20,7 +28,13 @@ const Item = (props) => {
         <p>{desc}</p>
         <form onSubmit={onSubmitHandler}>
           <label htmlFor=''>Amount</label>
-          <input type='number' />
+          <input
+            ref={amountRef}
+            defaultValue={1}
+            type='number'
+            min='1'
+            max='5'
+          />
           <button>Add</button>
         </form>
       </section>
