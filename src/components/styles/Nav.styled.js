@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
+  z-index: 950;
   position: fixed;
   top: 0;
   left: 0;
