@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-redux-meals/static/css/main.e6c13ad2.css",
+    "main.js": "/react-redux-meals/static/js/main.d9c0968c.js",
+    "index.html": "/react-redux-meals/index.html",
+    "main.e6c13ad2.css.map": "/react-redux-meals/static/css/main.e6c13ad2.css.map",
+    "main.d9c0968c.js.map": "/react-redux-meals/static/js/main.d9c0968c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.d9c0968c.js"
+  ]
+}
